@@ -52,7 +52,7 @@ def calculateRoofWithGapsFromEdge(originalRoof):
   
   return originalRoof
 
-def roofPlotWithLimitations():
+def amountOfPanelsOnTheRoof():
   if(fireCode > 0):
     fireCodeRoof = addFireProtocol(roofPoint)
     changedRoofPoint = calculateRoofWithGapsFromEdge(fireCodeRoof)
@@ -62,16 +62,18 @@ def roofPlotWithLimitations():
   roofWidth = math.sqrt(math.pow((changedRoofPoint[1][0] - changedRoofPoint[0][0]) + (changedRoofPoint[1][1] - changedRoofPoint[0][1]),2))
   roofLength = math.sqrt(math.pow((changedRoofPoint[3][0] - changedRoofPoint[0][0]) + (changedRoofPoint[3][1] - changedRoofPoint[0][1]),2))
   
-  allowedRoofArea = roofWidth * roofLength
-  print(allowedRoofArea)
-  return allowedRoofArea
+  amountOfLines = math.floor(roofWidth / (solarPanelWidth + gapBetweenPanel))
+  amountofPanelsInOneLine = math.floor(roofLength / (solarPanelLength + gapBetweenPanel))
+
+  amountofPanels = amountOfLines * amountofPanelsInOneLine
+  return amountofPanels
 
 
 
 # TODO: check why the original array for roofPoint is being changed inside the function - it shouldn't
 print("ROOFBEFORE: ", roofPoint)
 print("ROOFAFTER: ", roofPoint)
-roofPlotWithLimitations()
+amountOfPanelsOnTheRoof()
 
 
 
