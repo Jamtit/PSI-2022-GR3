@@ -1,0 +1,24 @@
+Instructions how to create your reports in this folder.
+
+*********************************************************
+
+If your not pushing the mini-report:
+
+1. If a folder for that weeks mini-reports isn't create, create one. The name should be the date of that week.
+  EX: "09-23"; the path should look something like this PSI-2022-GR3/Mini-Reports/09-23;
+2. Create a new file inside of the date folder and put your mini-report text in there.
+
+*********************************************************
+
+If you want to push the mini-report onto the git:
+
+1. Make sure you're not in the "main" branch. <The branch for mini-reports should be created>
+2. Your report should be named: "Team<number>-Report-<date>"; EX: "Team3-Report-09-23"
+2. Add your new report to that branch.
+3. Commit the files with a comment: "Mini-Report for <date> (Team<number>)"
+4. Push the new files onto that branch.
+5. Go to the "Pull Request" and ask for a pull to be made onto the main branch.
+
+**********************************************************
+
+
